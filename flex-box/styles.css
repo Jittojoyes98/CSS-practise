@@ -1,0 +1,31 @@
+.flex-container{
+    display: flex;   
+    /* default flex-start */
+    /* justify-content: space-around; */
+    /*make changes here by default stretch , flex-start will shrink them.*/
+    /* align-items: flex-start; */
+     /* this is usually when wrapping of content happens then we use it to see the spacing between items  */
+    /* align-content: center; */
+}
+.flex-item{
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: rgb(237, 239, 245);
+}
+.flex-item-1{
+    min-height: 100px;
+    flex-shrink: 0; /* default 1 shrinks */
+}
+.flex-item-2 {
+    min-height: 200px;
+    flex-grow: 2; /* default 0  dont grow*/
+    flex-basis: 0%;
+    /* now this is the magic it makes the elements start from 0 width and thus makes the actual width correct */
+}
+.flex-item-3 {
+    min-height: 300px;
+    flex-grow: 1;
+    flex-basis: 0%;
+    /* now this is the magic it makes the elements start from 0 width and thus makes the actual width correct */
+}

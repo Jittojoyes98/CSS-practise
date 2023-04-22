@@ -1,0 +1,44 @@
+.box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    /* note that it act as realtively positioned elements like it wont affect 
+        the flow elements and thus enters into it.
+        */
+    /* transform: translateY(100px); */
+    
+
+    /* combining things tranform takes from right to left 
+            so see the difference between the two
+        */
+    transform: translateX(200px) rotate(55deg);
+    /*  here rotate works first, the origin doesnt change and then translate */
+    /* transform: rotate(55deg) translateX(200px) ; */
+     /* here first the origin changes and then the rotation so it affects*/
+    z-index: -1;
+}
+.box-border{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px dotted black;
+}
+.test{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    
+
+    /* transform: translate(1000px); */
+}
+/* translate with percent means its refering to the actual size of the div. the current div
+ not the parent div here.
+*/
+/* 
+ relative and absolute can be used like,
+ translateX(calc(percent,pixels))
+                relative , absolute
+*/

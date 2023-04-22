@@ -1,0 +1,31 @@
+.parent {
+    display: flex;
+    padding: 1rem;
+    background: #C5EFF7;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    max-width: 70%;
+    margin: 2rem auto;
+}
+
+.child {
+    border: 6px dashed rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    overflow-x: hidden;
+    /* min-width: 0px; */
+    /* we can use overflow hidden as well , bec its same as min-width 0 here */
+}
+
+.truncate {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* If the overflow value is not visible,
+the value of the min-size property is set to 0 Hence,
+overflow: hidden can be a substitute for min-width: 0 or min-height: 0 */
+
+/* usually what flex items does is it takes the minimum-width as the content-based-minimum size
+ thus min-width is auto and like that.
+ thus we should change that to. min-width to 0.
+*/
